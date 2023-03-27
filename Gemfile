@@ -16,6 +16,8 @@ gem 'devise'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'cancancan'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
