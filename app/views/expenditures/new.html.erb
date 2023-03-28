@@ -1,9 +1,21 @@
-<h1>New expenditure</h1>
+<div class="bg-primary p-2 d-flex align-items-center">
+  <%= link_to category_expenditures_path, class: "text-decoration-none text-light display-5" do %>
+  <% end %>
+  <h1 class="mx-auto text-center mb-0 text-light">Add expenditure</h1>
+</div>
 
-<%= render "form", expenditure: @expenditure %>
-
-<br>
-
-<div>
-  <%= link_to "Back to expenditures", expenditures_path %>
+<div class="container">
+  <%= form_for [@category, @expenditure], html: {class: "form"} do |f| %>
+    <div class="form-group">
+      <%= f.label :name, class: 'py-2 fs-5' %>
+      <%= f.text_field :name, class: "form-control", placeholder: "expenditure name" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :amount, class: 'py-2 fs-5' %>
+      <%= f.text_field :amount, class: "form-control", placeholder: "expenditure amount", value: number_to_currency(@expenditure.amount) %>
+    </div>
+    <div class="text-center container mb-2 fixed-bottom">
+      <%= f.submit "Save", class: "btn btn-lg btn-custom container-fluid py-3" %>
+    </div>
+  <% end %>
 </div>

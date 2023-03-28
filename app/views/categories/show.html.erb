@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<h1><%= @category.name %></h1>
 
-<%= render @category %>
+<ul>
+  <% @expenditures.each do |expenditure| %>
+    <li>
+      <%= number_to_currency(expenditure.amount) %>
+    </li>
+  <% end %>
+</ul>
 
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", @category, method: :delete %>
-</div>
+<%= link_to "Add a new expenditure", new_category_expenditure_path(@category) %>

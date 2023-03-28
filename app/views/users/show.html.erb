@@ -1,5 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
+<% if @user %>
 <%= render @user %>
 
 <div>
@@ -8,3 +9,6 @@
 
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
+<% else %>
+  <p>Sorry, we could not find this user.</p>
+<% end %>
