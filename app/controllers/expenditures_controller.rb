@@ -28,6 +28,6 @@ class ExpendituresController < ApplicationController
   private
 
   def expenditure_params
-    params.require(:expenditure).permit(:name, :amount, :author_id)
+    params.require(:expenditure).permit(:name, :amount, :author_id, category_ids: [])
   end
 end

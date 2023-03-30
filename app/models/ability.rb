@@ -4,8 +4,8 @@ class Ability
   def initialize(user)
     user ||= User.new
     if (user.role = 'admin')
-      can :manage, Expenditure, user_id: user.id
-      can :manage, Category, user_id: user.id
+      can :manage, Expenditure, author_id: author.id
+      can :manage, Category, author_id: author.id
     else
       can :read, :all
     end
