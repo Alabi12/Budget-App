@@ -22,21 +22,18 @@
   <%= link_to root_path do %>
   <% end %>
 </div>
-<div class="container p-5 my-5 border">
+<div class="category-page">
     <h2>Add category</h2>
   <%= form_for @category do |f|%>
     <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </div> <br />
+      <%= f.text_field :name, placeholder: "name" %>
+    </div><br /><br />
     <div class="form-group">
-     <%= f.label :icon %>
-      <%= f.text_field :icon %>
-    </div><br />
-    <div>
-    <%= f.submit "Save", class: "btn btn-primary" %>
-    <%= link_to "Back", categories_path, class: "btn btn-primary" %>
-
+      <%= f.text_field :icon, placeholder: "icon" %>
+    </div><br /><br /><br />
+    <div class="category-link-trans">
+      <%= f.submit "Save", class: "btn btn-lg btn-custom container-fluid py-3" %>
+      <%= link_to "Back", categories_path %>
     </div>
   <% end %>
 </div>

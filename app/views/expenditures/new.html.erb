@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary m-t 0 pt-5">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,7 @@
     </div>
   </div>
 </nav>
-<div class="bg-primary p-2 d-flex align-items-center">
+<div class="category-page">
   <%= link_to category_expenditures_path, class: "text-decoration-none text-light display-5" do %>
   <% end %>
   <h1 class="mx-auto text-center mb-0 text-light">Add expenditure</h1>
@@ -38,7 +38,7 @@
       <%= f.label :category_ids %>
       <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, required: true %>
     </div>
-    <div class="text-center container mb-2 fixed-bottom">
+    <div class="category-link-trans">
       <%= f.submit "Save", class: "btn btn-lg btn-custom container-fluid py-3" %>
       <%= link_to "Back", categories_path %>
     </div>

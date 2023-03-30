@@ -19,9 +19,7 @@
   </div>
 </nav>
 <div class="category-page">
-  <%# <%= link_to root_path, class: "text-decoration-none text-light display-5" do %>
-  <%# <% end %>
-  <h1>Transaction</h1>
+  <h1>Transactions</h1>
 </div>
 <div class="category-page2">
   <div>
@@ -39,12 +37,8 @@
           <span><%= number_to_currency(transaction.amount) %></span>
         </li>
       <% end %>
-    </ul>
-  </div>
+     </ul>
+    </div>
   </div>
   <div class="category-link-trans">
-    <%= link_to 'Add a new transaction', new_category_expenditure_path, class: "btn btn-lg btn-custom container-fluid py-3" %>
-    </div><br />
-   <div class="category-link-trans"> 
-    <%= link_to "Back", categories_path %>
-  </div>
+    <%= link_to 'Add a new transaction', new_category_expenditure_path%>
