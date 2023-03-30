@@ -101,6 +101,8 @@ nav {
 .nav-items-register {
   display: flex;
   color: #fff;
+  width: 100%;
+  margin: auto;
   gap: 5rem;
 }
 
@@ -149,6 +151,11 @@ nav {
     position: absolute;
     top: -1.2%;
     right: 0;
+  }
+
+  .nav-items-register {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .nav-items h4 {
