@@ -13,3 +13,260 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: proxima-nova, sans-serif;
+}
+
+.container-nav {
+  display: flex;
+  width: 100%;
+  background-color: #326eb1;
+  padding: 1rem;
+}
+
+.button-submit {
+  background-color: #326eb1;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  align-content: flex-end;
+  background-color: #f5f6f8;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forgot-password-link {
+  color: #434b54;
+  text-decoration: none;
+}
+
+.login {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  top: -1%;
+  right: -28%;
+  margin: 1.8rem 10rem;
+  background-color: #326eb1;
+  border: none;
+}
+
+.nav-items h4 {
+  position: absolute;
+  top: 3.9%;
+  right: 45%;
+}
+
+.icon {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.home-heading {
+  margin-bottom: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 30%;
+  background-color: #326eb1;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  color: #fff;
+}
+
+.nav-items-register {
+  display: flex;
+  color: #fff;
+  width: 100%;
+  margin: auto;
+  gap: 5rem;
+}
+
+.nav-items-register h4 {
+  font-size: 20px;
+}
+
+.nav-items h6 {
+  margin: 0 10px; /* Optional: add some margin between the items */
+}
+
+.homePageButtonBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  gap: 1rem;
+}
+
+.homePageButtonBox a {
+  background-color: #326eb1;
+  padding: 0 6rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.2rem;
+}
+
+.homePageButtonBox a:hover {
+  background-color: #fff;
+  color: #326eb1;
+}
+
+.homePageButtonWhite,
+.homePageButtonBlue,
+.loginField {
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media only screen and (min-width: 601px) {
+  .login {
+    position: absolute;
+    top: -1.2%;
+    right: 0;
+  }
+
+  .nav-items-register {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-items h4 {
+    position: absolute;
+    top: 3.9%;
+    right: 45%;
+  }
+
+  .container-nav {
+    width: 80%;
+  }
+
+  .category-page h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -1rem 12rem 2rem;
+  }
+}
+
+.category-page {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 90vh;
+  padding: 3rem;
+}
+
+.category-page h2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 90vh;
+  margin: 0 20%;
+}
+
+.category-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.category-items img {
+  width: 100px;
+  height: 100px;
+}
+
+.category-page2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 1.5rem;
+  border: 0.5px solid;
+  box-shadow: 5px 5px;
+  margin-bottom: 10%;
+}
+
+.category-link {
+  background-color: #60b625;
+  padding: 1.5rem;
+  border-radius: 0.2rem;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.category-link a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #fff;
+  padding: 1rem;
+}
+
+.category-link-trans {
+  background-color: #60b625;
+  padding: 1rem 6rem;
+  border-radius: 0.2rem;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.category-link-trans a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  padding: 0.4rem 0.1rem;
+  justify-content: center;
+  border: 1px solid #fff;
+  /* stylelint-disable-next-line no-missing-end-of-source-newline */
+}
+
+.category-link-trans01 {
+  background-color: #60b625;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.category-link-trans01 a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.4rem 0.3rem;
+  justify-content: center;
+  border: 1px solid #fff;
+}
+
+.category-page h1 {
+  position: absolute;
+  top: 7%;
+  left: 25%;
+  color: #b1ccdf;
+  text-transform: uppercase;
+}

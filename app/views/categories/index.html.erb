@@ -1,0 +1,43 @@
+
+<nav class="navbar navbar-expand-md navbar-dark bg-primary m-t 0 pt-5">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <%= link_to "Home", users_path, class: "nav-link active"  %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Edit profile", edit_user_registration_path, class: "nav-link text-light" %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn text-light px-0"  %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="category-page">
+<h1 class="category-heading">Categories</h1>
+<div class="category-items">
+  <% @categories.each do |category| %>
+    <div>
+      <%= link_to category_expenditures_path(category) do %>
+        <div class="category-page2">
+            <img src="<%= category.icon %>" alt="icon" >
+            <h5><%= category.name %></h5>
+            <h5><%= number_to_currency(category.expenditures.sum(:amount)) %></h5>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="category-link">
+    <%= link_to "Add a new category", new_category_path %>
+  </div>
+</div>
+</div>
+
+
