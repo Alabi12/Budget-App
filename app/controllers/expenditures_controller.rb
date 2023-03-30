@@ -11,7 +11,7 @@ class ExpendituresController < ApplicationController
   end
 
   def create
-    @expenditure =Expenditure.new(expenditure_params)
+    @expenditure = Expenditure.new(expenditure_params)
     @category = Category.find(params[:category_id])
     @expenditure.author = current_user
     @expenditure.categories << @category
