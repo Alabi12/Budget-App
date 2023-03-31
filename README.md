@@ -102,9 +102,7 @@ To run tests, run the following command:
 
 You can deploy this project using:
 
-```sh
-  Not yet deployed
-```
+ [Demo] (https://budget-app-m3yc.onrender.com)
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
