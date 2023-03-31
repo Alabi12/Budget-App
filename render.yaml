@@ -1,12 +1,12 @@
 databases:
   - name: budget_App
     ipAllowList: []
-    databaseName: budget_app_naiw
-    user: budget_app_naiw_user
+    databaseName: budget_app
+    user: budget_app_user
 
 services:
   - type: web
-    name: Budget_Lines
+    name: budget_App
     env: ruby
     buildCommand: "./render-build.sh"
     startCommand: "bundle exec rails s"
