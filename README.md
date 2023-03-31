@@ -46,9 +46,9 @@ Rails
 
 ### Key Features <a name="key-features"></a>
 
-- **register and log in, so that the data is private to them**
-- **introduce new transactions associated with a category**
-- **see the money spent on each category**
+- **Log into the application**
+- **Create a category**
+- **Add transaction**
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -102,10 +102,15 @@ To run tests, run the following command:
 
 You can deploy this project using:
 
- [Demo] (https://budget-app-m3yc.onrender.com)
-
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+### Live demo 
+
+Here is a live [demo](https://budget-app-m3yc.onrender.com) of the application
+
+### Video presentation
+Here is the link to the video presentation of the [project](https://www.loom.com/share/3a6fa9dd19c8441f8f5c01f2234fae07)
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Robert**
@@ -131,7 +136,9 @@ If you like this project...give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [@microverse](https://www.microverse.org/)
+- I would like to thank Microvers for providing this great opportunity and for the project guide as well 👏
+
+- Huge appriciation to Gregoire Vella for providing design system guidelines since this project is built upon thatopment.
 
 ## 📝 License <a name="license"></a>
 
