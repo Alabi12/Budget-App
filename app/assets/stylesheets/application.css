@@ -106,8 +106,11 @@ nav {
   gap: 5rem;
 }
 
-.nav-items-register h4 {
-  font-size: 20px;
+.av-items-register {
+  position: absolute;
+  top: 3.9%;
+  right: 45%;
+  color: #fff;
 }
 
 .nav-items h6 {
@@ -164,6 +167,13 @@ nav {
     right: 45%;
   }
 
+  .av-items-register {
+    position: absolute;
+    top: 3.9%;
+    right: 45%;
+    color: #fff;
+  }
+
   .container-nav {
     width: 80%;
   }
@@ -181,7 +191,7 @@ nav {
   justify-content: space-between;
   flex-direction: column;
   height: 90vh;
-  padding: 3rem;
+  padding: 5rem;
 }
 
 .category-page h2 {

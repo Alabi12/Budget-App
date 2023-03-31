@@ -3,9 +3,8 @@
     <div class="nav-icon">
       <a href="<%= root_path %>"><i class="bi bi-arrow-left big-arrow icon"></i></a>
     </div>
-    <div class="nav-items-register">
+    <div class="av-items-register">
         <h4>REGISTER</h4>
-        <h4>NEXT</h4>
     </div>
   </nav>
 </div>
@@ -43,10 +42,8 @@
   <br /> <br />
 
   <div class="actions">
-    <a><%= f.submit "Sign up" %></a>
+    <a><%= f.submit "Next", class: "login" %></a>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
 </div>
 
