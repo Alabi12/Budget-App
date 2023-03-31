@@ -3,7 +3,7 @@ databases:
     ipAllowList: []
     databaseName: budget_app
     user: budget_app_user
-
+    plan: free
 services:
   - type: web
     name: budget_App
@@ -17,3 +17,4 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+    plan: free
