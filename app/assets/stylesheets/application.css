@@ -53,17 +53,19 @@
 .forgot-password-link {
   color: #434b54;
   text-decoration: none;
+  position: absolute;
+  left: 35%;
 }
 
 .login {
   color: #fff;
   text-decoration: none;
   position: absolute;
-  top: -1%;
-  right: -28%;
-  margin: 1.8rem 10rem;
   background-color: #326eb1;
   border: none;
+  width: 4rem;
+  top: -3.5rem;
+  right: 0;
 }
 
 .nav-items h4 {
@@ -120,46 +122,67 @@ nav {
 .homePageButtonBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 5rem;
+  position: fixed;
+  top: auto;
+  bottom: 0;
   gap: 1rem;
+}
+
+.credentials {
+  position: fixed;
+  top: 13%;
+  bottom: 0;
+  width: 100%;
+}
+
+form input {
+  width: 100%;
 }
 
 .homePageButtonBox a {
   background-color: #326eb1;
   padding: 0 6rem;
   font-size: 1.2rem;
-  color: #fff;
+  color: #f5f6f8;
   text-decoration: none;
   border-radius: 0.2rem;
 }
 
 .homePageButtonBox a:hover {
-  background-color: #fff;
+  background-color: #f5f6f8;
   color: #326eb1;
-}
-
-.homePageButtonWhite,
-.homePageButtonBlue,
-.loginField {
-  width: 100%;
-  padding: 1rem 0;
-  border: none;
-  text-decoration: none;
-  text-align: center;
 }
 
 @media only screen and (min-width: 601px) {
   .login {
     position: absolute;
-    top: -1.2%;
-    right: 0;
+    top: -3.5rem;
+    right: 10rem;
   }
 
   .nav-items-register {
     display: flex;
     justify-content: flex-end;
   }
+
+  .credentials {
+    position: fixed;
+    top: 13%;
+    bottom: 0;
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* form input {
+    width: 90%;
+    margin: auto;
+  } */
 
   .nav-items h4 {
     position: absolute;

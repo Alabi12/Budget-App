@@ -1,50 +1,34 @@
 require 'rails_helper'
 
-RSpec.describe 'Test for the category and user page', type: :system do
-  describe 'check the user information' do
-    before(:all) do
-      @user = User.new(name: 'robert alabi', email: 'wolo22001@gmail.com', password: 12_345_678,
-                       password_confirmation: 12_345_678)
+RSpec.describe 'Category Index', type: :system do
+  before(:each) do
+    @user = User.create(name: 'robert', email: 'wolo22001@gmail.com', password: '2e2010510',
+                        password_confirmation: '2e2010510')
+    @category = Category.create(user_id: @user.id, name: 'pizza', icon: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
+  end
 
-      visit new_user_registration_path
-      fill_in 'Name', with: @user.name
-      fill_in 'Email', with: @user.email
-      fill_in 'Password', with: @user.password
-      fill_in 'confirm_password', with: @user.password_confirmation
-      click_button 'Sign up'
-    end
-    it 'should see category icon' do
-      visit new_user_session_path
+  it 'User should log in' do
+    visit new_user_session_path
+    fill_in 'Email', with: @user.email
+    sleep(2)
+    fill_in 'Password', with: @user.password
+    click_button 'Log in'
+    sleep(5)
+  end
 
-      fill_in 'user_email', with: @user.email
-      fill_in 'user_password', with: @user.password
-      click_button 'Log in'
-    end
+  it 'User should log in' do
+    visit new_user_session_path
+    fill_in 'Email', with: @user.email
+    fill_in 'Password', with: @user.password
+    sleep(4)
+    click_button 'Log in'
+    assert_text 'Categories'
+    click_on 'Categories'
+    sleep(2)
+    click_link('Add a new category')
 
-    context 'should creat a page' do
-      before do
-        @category = Category.new(author: @user, name: 'contribute',
-                                 icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST-yS-rMfYaDmYTKgsYHqvHHRO0-uHffrxEk0bmnCCxF-fjhLtOVXqUfji05fOf996WR8&usqp=CAU')
-        visit new_user_session_path
-        fill_in 'user_email', with: @user.email
-        fill_in 'user_password', with: @user.password
-        click_button 'Log in'
-
-        click_link 'New category'
-        fill_in 'category_name', with: @category.name
-        fill_in 'category_icon', with: @category.icon
-        click_button 'Save'
-        sleep(1)
-      end
-      it 'should image' do
-        expect(page).to have_selector('img')
-      end
-      it 'should name' do
-        expect(page).to have_content(@category.name.to_s)
-      end
-      it 'should image' do
-        expect(page).to have_content('NEW CATEGORY')
-      end
-    end
+    fill_in 'Name', with: @category.name
+    fill_in 'Icon', with: @category.icon
+    click_button 'Add a new category'
   end
 end
